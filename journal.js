@@ -99,6 +99,7 @@ submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
     let journal = input.value;
     output.innerHTML = journal;
+    // transform from string to object ↓
     let newJornal = new Function(`return JSON.parse(JSON.stringify(${journal}));`)();
     // console.log(typeof newJornal)
 
